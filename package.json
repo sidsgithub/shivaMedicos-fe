@@ -8,12 +8,21 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.0",
     "expo": "~38.0.8",
+    "expo-google-app-auth": "^8.1.2",
     "expo-status-bar": "^1.0.2",
+    "firebase": "^7.19.1",
+    "immer": "^7.0.8",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "~0.11.7"
+    "react-native": "^0.63.2",
+    "react-native-elements": "^2.3.0",
+    "react-native-google-signin": "^2.1.1",
+    "react-native-vector-icons": "^7.0.0",
+    "react-native-web": "~0.11.7",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",

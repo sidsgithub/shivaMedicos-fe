@@ -1,0 +1,51 @@
+export const DATA = [
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:true,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:false,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:false,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:true,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:false,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:false,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    image: "../../assets/med.jpg",
+    description: "some description",
+    title: "Paracetamol",
+    prescription:false,
+  },
+];
