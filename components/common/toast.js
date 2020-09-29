@@ -4,8 +4,8 @@ export const showToast = (message,duration) => {
   ToastAndroid.showWithGravityAndOffset(
     message,
     duration,
-    ToastAndroid.BOTTOM,
-    25,
-    50
+    ToastAndroid.TOP,
+    0,
+    25
   );
 };

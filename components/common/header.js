@@ -1,21 +1,26 @@
 import { Icon, Header, withBadge } from "react-native-elements";
-import React from "react";
+import React, { useState } from "react";
 import { Button, View, ToastAndroid } from "react-native";
 import * as Google from "expo-google-app-auth";
 import { useDispatch, useSelector } from "react-redux";
-import { loginSuccess, logoutSuccess } from "../../actions/auth";
+import { loginSuccess, logoutSuccess } from "../../actions/index";
 import { showToast } from "../common/toast";
-import {clientId} from '../../env';
+import { clientId } from "../../env";
 
+export default function HeaderComponent(props) {
+  const { navigation } = props.props;
 
-export default function HeaderComponent() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
-  // const BadgedIcon = withBadge(cartValue?cartValue:null,{status:'warning',left:1})(Icon);
-  const BadgedIcon = withBadge(1,{status:'warning',left:1})(Icon);
+  const cart = useSelector((state) => state.cart.value);
+
+  const BadgedIcon = withBadge(cart ? cart : 0, { status: "warning", left: 1 })(
+    Icon
+  );
 
   function logoutHandler() {
     dispatch(logoutSuccess());
+    console.log(user);
     showToast("Logged Out !!", ToastAndroid.LONG);
   }
 
@@ -45,16 +50,18 @@ export default function HeaderComponent() {
           user.isLoggedIn ? (
             <Button title="LogOutt" onPress={() => logoutHandler()} />
           ) : (
-            <Button title="LogInn" onPress={() => signInWithGoogleAsync()} />
+            <Button title="LogIn" onPress={() => signInWithGoogleAsync()} />
           )
         }
         centerComponent={{ text: "Shiva Medicos", style: { color: "#fff" } }}
+        
         rightComponent={
           <BadgedIcon
             containerStyle={{ right: 10 }}
             name="md-cart"
             type="ionicon"
             color="white"
+            onPress={() => navigation.navigate("Cart")}
           />
         }
       />

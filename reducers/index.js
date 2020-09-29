@@ -1,31 +1,13 @@
 import { combineReducers } from "redux";
 import auth from "./auth";
-import { LOGOUT_SUCCESS } from "../actions/auth";
-import { clearAll } from "../components/common/clearStorage";
+import cart from './cart';
 
-const appReducers = combineReducers({
-  auth,
-});
 
-const reducers = (state, action) => {
-  let newState = { ...state };
-
-  switch (action.type) {
-    case LOGOUT_SUCCESS:
-      clearAll();
-      newState = {
-        ...newState,
-        auth: {
-          isLoggedIn: false,
-          token: null,
-        },
-      };
-      break;
-    default:
-      break;
+export default combineReducers(
+  {
+    auth,
+    cart,
   }
+);
 
-  return appReducers(newState, action);
-};
 
-export default reducers;

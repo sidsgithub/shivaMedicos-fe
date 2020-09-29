@@ -2,6 +2,7 @@ export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const ADD_CART = 'ADD_CART';
 
 export const loginRequest = () => ({
   type: LOGIN_REQUEST,
@@ -20,3 +21,10 @@ export const loginFailure = error => ({
 export const logoutSuccess = () => ({
   type: LOGOUT_SUCCESS,
 });
+
+//cart actions 
+
+export const addCart = (payload)=>({
+  type: ADD_CART,
+  payload,
+})
